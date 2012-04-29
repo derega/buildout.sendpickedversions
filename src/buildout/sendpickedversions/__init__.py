@@ -52,7 +52,7 @@ def send_picked_versions(old_logging_shutdown, whiskers_url, buildout_name):
             package['version'] = v
 
             packages.append(package)
-            data = dict(packages=packages, buildoutname=buildout_name)
+        data = dict(packages=packages, buildoutname=buildout_name)
 
         if whiskers_url:
             res = send_picked_versions_data(whiskers_url, json.dumps(data))
